@@ -1,0 +1,205 @@
+
+    
+    <div class="space-bg">
+        <div class="stars"></div>
+        <div class="nebula"></div>
+        <div class="grid"></div>
+    </div>
+
+    
+    <header>
+        <div class="logo">
+            <span class="logo-icon">🚀</span>
+            <span class="logo-text">APEX UNIVERSE</span>
+        </div>
+        <div class="status-bar">
+            <div class="connection-status">
+                <span class="pulse"></span>
+                SYSTEM ONLINE
+            </div>
+            <div class="system-metrics">
+                <span>🤖 6 Agents</span>
+                <span>⏱️ 99.9% Uptime</span>
+                <span>🧠 45% Load</span>
+            </div>
+        </div>
+    </header>
+
+    
+    <nav>
+        <button class="nav-btn active">🪐 Dashboard</button>
+        <button class="nav-btn">🕸️ Agent Network</button>
+        <button class="nav-btn">🎙️ Voice Command</button>
+        <button class="nav-btn">🖼️ Content Gallery</button>
+    </nav>
+
+    
+    <main>
+        
+        <div id="dashboard" class="view active">
+            
+            <div class="stats-grid">
+                <div class="stat-card primary">
+                    <div class="stat-header">
+                        <div class="stat-icon">⚡</div>
+                    </div>
+                    <div class="stat-value">6</div>
+                    <div class="stat-label">Active Agents</div>
+                    <div class="stat-change">↑ All operational</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="interactions">1,247</div>
+                    <div class="stat-label">Total Interactions</div>
+                    <div class="stat-change">↑ 23% this week</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">94.5%</div>
+                    <div class="stat-label">Success Rate</div>
+                    <div class="stat-change">↑ 2.1% improvement</div>
+                </div>
+                <div class="stat-card revenue">
+                    <div class="stat-value">$45,230</div>
+                    <div class="stat-label">Revenue Generated</div>
+                    <div class="stat-change">↑ $12,400 this month</div>
+                </div>
+            </div>
+
+            
+            <div class="agents-section">
+                <h3 class="section-title">🤖 System Agents</h3>
+                <div class="agents-container">
+                    <div class="agent-orb">
+                        <div class="agent-ring" style="border-color: #00d9a5;"></div>
+                        <span class="agent-icon">💰</span>
+                        <span class="agent-name">Sales</span>
+                        <span class="agent-status">Active</span>
+                    </div>
+                    <div class="agent-orb">
+                        <div class="agent-ring" style="border-color: #ff6b35;"></div>
+                        <span class="agent-icon">🚀</span>
+                        <span class="agent-name">Viral</span>
+                        <span class="agent-status">Active</span>
+                    </div>
+                    <div class="agent-orb">
+                        <div class="agent-ring" style="border-color: #a855f7;"></div>
+                        <span class="agent-icon">💳</span>
+                        <span class="agent-name">Payment</span>
+                        <span class="agent-status">Active</span>
+                    </div>
+                    <div class="agent-orb">
+                        <div class="agent-ring" style="border-color: #06b6d4;"></div>
+                        <span class="agent-icon">💬</span>
+                        <span class="agent-name">WhatsApp</span>
+                        <span class="agent-status">Active</span>
+                    </div>
+                    <div class="agent-orb">
+                        <div class="agent-ring" style="border-color: #f59e0b;"></div>
+                        <span class="agent-icon">🧠</span>
+                        <span class="agent-name">Memory</span>
+                        <span class="agent-status">Active</span>
+                    </div>
+                    <div class="agent-orb">
+                        <div class="agent-ring" style="border-color: #ec4899;"></div>
+                        <span class="agent-icon">📊</span>
+                        <span class="agent-name">Analytics</span>
+                        <span class="agent-status">Active</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="activity-section">
+                <h3 class="section-title">📊 Real-time Activity</h3>
+                <div class="activity-list" id="activityList">
+                    
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="agents" class="view">
+            <div class="network-container">
+                <h3 class="section-title">🕸️ Agent Network Topology</h3>
+                <div class="network-graph">
+                    <div class="node node-central">🧠 Orchestrator</div>
+                    <div class="node node-agent node-sales">💰 Sales Agent</div>
+                    <div class="node node-agent node-viral">🚀 Viral Agent</div>
+                    <div class="node node-agent node-payment">💳 Payment Agent</div>
+                    <div class="node node-agent node-whatsapp">💬 WhatsApp Agent</div>
+                    <div class="node node-agent node-memory">🧠 Memory Agent</div>
+                    <div class="node node-agent node-analytics">📊 Analytics Agent</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="voice" class="view">
+            <div class="voice-container">
+                <h3 class="section-title">🎙️ Voice Command Center</h3>
+                
+                <div class="voice-visualizer">
+                    <div class="voice-ring"></div>
+                    <div class="waveform" id="waveform">
+                        
+                    </div>
+                    <button class="voice-btn" id="voiceBtn">🎤</button>
+                    <p class="voice-hint" id="voiceHint">Press to speak. Say "Apex" followed by your command</p>
+                </div>
+
+                <div id="transcriptBox" style="display: none;">
+                    <div class="transcript-box">
+                        <div class="box-header">🎯 Command Recognized</div>
+                        <div class="box-text" id="transcriptText"></div>
+                    </div>
+                </div>
+
+                <div id="responseBox" style="display: none;">
+                    <div class="response-box">
+                        <div class="box-header">🤖 Agent Response</div>
+                        <div class="box-text" id="responseText"></div>
+                    </div>
+                </div>
+
+                <div class="quick-commands">
+                    <h4>⚡ Quick Commands</h4>
+                    <div class="commands-list">
+                        <span class="command-chip">Show sales metrics</span>
+                        <span class="command-chip">Generate viral content</span>
+                        <span class="command-chip">Process payment</span>
+                        <span class="command-chip">Send WhatsApp</span>
+                        <span class="command-chip">Analyze trends</span>
+                        <span class="command-chip">Create report</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="content" class="view">
+            <div class="content-stats">
+                <div class="stat-card">
+                    <div class="stat-value">23</div>
+                    <div class="stat-label">Published</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color: var(--accent-orange);">3</div>
+                    <div class="stat-label">Viral</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">156K</div>
+                    <div class="stat-label">Total Engagement</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">5</div>
+                    <div class="stat-label">Scheduled</div>
+                </div>
+            </div>
+
+            <div class="content-grid" id="contentGrid">
+                
+            </div>
+        </div>
+    </main>
+
+    
+
